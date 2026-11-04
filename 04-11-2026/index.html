@@ -1,0 +1,85 @@
+print("===== CASA INTELIGENTE E ACESSÍVEL =====")
+
+# Variáveis de controle dos dispositivos e recursos de acessibilidade
+luz = "Desligada"
+porta = "Fechada"
+alarme = "Desativado"
+aviso_luminoso = "Desativado"
+orientacao_audio = "Desativada"
+
+while True:
+    print("\n--- MENU DE CONTROLE ---")
+    print("1 - Ligar luz")
+    print("2 - Desligar luz")
+    print("3 - Abrir porta")
+    print("4 - Fechar porta")
+    print("5 - Ativar/Desativar alarme")
+    print("6 - Consultar situação de todos os dispositivos")
+    print("7 - Ativar/Desativar aviso luminoso")
+    print("8 - Ativar/Desativar orientação por áudio")
+    print("9 - Solicitar ajuda")
+    print("0 - Sair")
+
+    opcao = input("\nEscolha uma opção: ")
+
+    if opcao == "1":
+        luz = "Ligada"
+        print("-> Luz ligada com sucesso!")
+        
+    elif opcao == "2":
+        luz = "Desligada"
+        print("-> Luz desligada com sucesso!")
+        
+    elif opcao == "3":
+        porta = "Aberta"
+        print("-> Porta aberta com sucesso!")
+        
+    elif opcao == "4":
+        porta = "Fechada"
+        print("-> Porta fechada com sucesso!")
+        
+    elif opcao == "5":
+        if alarme == "Desativado":
+            alarme = "Ativado"
+            print("-> Alarme ativado!")
+        else:
+            alarme = "Desativado"
+            print("-> Alarme desativado!")
+            
+    elif opcao == "6":
+        print("\n=== SITUAÇÃO ATUAL DA CASA ===")
+        print(f"• Luz: {luz}")
+        print(f"• Porta: {porta}")
+        print(f"• Alarme: {alarme}")
+        print(f"• Aviso Luminoso: {aviso_luminoso}")
+        print(f"• Orientação por Áudio: {orientacao_audio}")
+        
+    elif opcao == "7":
+        if aviso_luminoso == "Desativado":
+            aviso_luminoso = "Ativado"
+            print("-> Aviso luminoso ativado com sucesso!")
+        else:
+            aviso_luminoso = "Desativado"
+            print("-> Aviso luminoso desativado.")
+            
+    elif opcao == "8":
+        if orientacao_audio == "Desativada":
+            orientacao_audio = "Ativada"
+            print("-> Orientação por áudio ativada com sucesso!")
+        else:
+            orientacao_audio = "Desativada"
+            print("-> Orientação por áudio desativada.")
+            
+    elif opcao == "9":
+        print("\n=== CENTRAL DE AJUDA ===")
+        print("Este programa foi desenvolvido para auxiliar no controle residencial.")
+        print("• Digite o número correspondente à ação desejada no menu.")
+        print("• Recursos de acessibilidade (Aviso Luminoso e Áudio) podem ser alternados nas opções 7 e 8.")
+        print("• Em caso de dúvidas técnicas, consulte o manual do sistema.")
+        
+    elif opcao == "0":
+        print("Encerrando o sistema da Casa Inteligente. Até mais!")
+        break
+        
+    else:
+        print("Opção inválida! Por favor, digite um número válido do menu.")
